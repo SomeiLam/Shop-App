@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import '../providers/cart.dart' show Cart;
 import '../providers/orders.dart';
 import '../widgets/cart_item.dart';
-import '../screens/orders_screen.dart';
 
 class CartScreen extends StatelessWidget {
   static const routeName = '/cart';
@@ -50,8 +49,6 @@ class CartScreen extends StatelessWidget {
                               cart.totalAmount,
                             );
                             cart.clear();
-                            Navigator.of(context)
-                                .pushNamed(OrdersScreen.routeName);
                           },
                           style: ElevatedButton.styleFrom(
                             foregroundColor:
