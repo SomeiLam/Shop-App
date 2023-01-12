@@ -235,7 +235,8 @@ class _EditedProductScreenState extends State<EditProductScreen> {
                       decoration: InputDecoration(labelText: 'Image URL'),
                       keyboardType: TextInputType.url,
                       textInputAction: TextInputAction.done,
-                      controller: _imageUrlController,
+                      controller:
+                          _imageUrlController, // can not use initial value if you use controller
                       focusNode: _imageUrlFocusNode,
                       onFieldSubmitted: (_) {
                         _saveForm();
